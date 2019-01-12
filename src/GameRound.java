@@ -4,6 +4,7 @@ public class GameRound
 	public static int SIZEY = 6;
 	
 	public Player player1, player2;
+	public int currentTurn = 1;
 	
 	public Node[][] nodes = new Node[SIZEX][SIZEY];
 	
@@ -12,6 +13,8 @@ public class GameRound
 	{
 		this.player1 = player1;
 		this.player2 = player2;
+		
+		init();
 	}
 	
 	public void init(){
