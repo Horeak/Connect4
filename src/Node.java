@@ -1,7 +1,7 @@
 public class Node
 {
 	public int x, y;
-	public Player selectedBy;
+	public EnumState state = EnumState.EMPTY;
 	
 	public Node( int x, int y )
 	{

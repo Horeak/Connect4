@@ -3,14 +3,16 @@ import java.awt.*;
 
 public class Main
 {
-	private static final String name = "Connect4";
+	public static final String name = "Connect4";
 	public static JFrame frame;
 	public static GameCanvas canvas;
 	
+	public static UI currentUI = null;
+	
 	public static void main(String[] args){
 		frame = new JFrame(name);
-		frame.setPreferredSize(new Dimension(700, 600));
-		frame.setMinimumSize(new Dimension(700, 600));
+		frame.setPreferredSize(new Dimension(900, 800));
+		frame.setMinimumSize(new Dimension(900, 800));
 		frame.setResizable(true);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
@@ -19,5 +21,7 @@ public class Main
 		
 		frame.pack();
 		frame.setVisible(true);
+		
+		currentUI = new LoginScreen();
 	}
 }

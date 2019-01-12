@@ -1,0 +1,6 @@
+public enum EnumState
+{
+	EMPTY,
+	CAPTURED_PLAYER1,
+	CAPTURED_PAYER2;
+}
