@@ -1,7 +1,7 @@
 public class GameRound
 {
-	public static int SIZEX = 50;
-	public static int SIZEY = 30;
+	public static int SIZEX = 7;
+	public static int SIZEY = 6;
 	
 	public Player player1, player2;
 	

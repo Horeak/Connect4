@@ -8,6 +8,7 @@ public class Main
 	public static GameCanvas canvas;
 	
 	public static UI currentUI = null;
+	public static GameRound gameRound = null;
 	
 	public static void main(String[] args){
 		frame = new JFrame(name);
@@ -22,6 +23,23 @@ public class Main
 		frame.pack();
 		frame.setVisible(true);
 		
-		currentUI = new LoginScreen();
+		Controlls.init(frame, canvas);
+		
+		setUI(new LoginScreen());
+		
+		while (true) {
+			canvas.repaint();
+			//TODO Tweak this, updates need to be sent at a proper rate independant of fps
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void setUI(UI newUI){
+		currentUI = newUI;
+		newUI.addButtons();
 	}
 }

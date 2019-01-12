@@ -7,6 +7,8 @@ public abstract class UI
 {
 	public CopyOnWriteArrayList<Button> buttons = new CopyOnWriteArrayList<>();
 	
+	public InputBox selectedInputBox = null;
+	
 	public boolean isMouseOnButton(){
 		for(Button btn : buttons){
 			if(btn.isMouseOver()){
