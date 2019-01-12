@@ -38,7 +38,20 @@ public class LoginScreen extends UI
 		g2.setColor(Color.black);
 		drawCenteredString(g, Main.name, title);
 		
-		Rectangle player1 = new Rectangle(0,0,0,0);
-		Rectangle player2 = new Rectangle(0,0,0,0);
+		g2.setClip(null);
+		
+		int playerWindowSizeX = width / 4;
+		int playerWindowSizeY = height / 3;
+		
+		Rectangle player1 = new Rectangle(5,height - (playerWindowSizeY + 5),playerWindowSizeX,playerWindowSizeY);
+		Rectangle player2 = new Rectangle(width - (playerWindowSizeX + 5),height - (playerWindowSizeY + 5),playerWindowSizeX,playerWindowSizeY);
+		
+		g2.setColor(Color.white);
+		g2.fill(player1);
+		g2.fill(player2);
+		
+		g2.setColor(Color.darkGray);
+		g2.draw(player1);
+		g2.draw(player2);
 	}
 }
