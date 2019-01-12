@@ -4,6 +4,5 @@ public class Player
 {
 	public String username;
 	public Color userColor;
-	
-	public int wins, losses;
+	public int wins, losses, draws;
 }
